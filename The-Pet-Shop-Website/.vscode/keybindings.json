@@ -1,0 +1,11 @@
+[
+  {
+    "key": "ctrl+alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.openWorkspaceSettingsFile"
+  }
+]
