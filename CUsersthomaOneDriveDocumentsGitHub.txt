@@ -1,1 +1,32 @@
 "C:\Users\thoma\OneDrive\Documents\GitHub"
+
+C:\Users\thoma\OneDrive\Documents\GitHub\HTML-AND-CSS-PROJECTS\One-Page-Website
+
+ cd OneDrive/Documents/GitHub/HTML-AND-CSS-PROJEcTS/One-Page-Website
+
+✅ Start your local server
+Now run:
+python -m http.server 8000
+
+Then open your browser and go to:
+http://localhost:8000
+
+Click your .html file.
+Your YouTube embed should work now 🎉
+
+🔑 Pro tip (much easier next time)
+Instead of typing paths:
+
+
+Open the folder in Windows Explorer
+
+
+Right-click inside it
+
+
+Choose “Open Git Bash here”
+
+
+Boom — you’re already in the correct directory.
+
+If anything still errors, paste the next message Git Bash gives you and we’ll knock it out fast 💪
