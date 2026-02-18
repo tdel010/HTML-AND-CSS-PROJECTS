@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--HEADER-->
-<header>
+<head>
     <title>Types of mountain bikes</title>
     <meta charset="utf-8">
-    <meta name="" author" content="Tom Delaney">
-    <h1>Types of mountain bikes</h1>
+    <meta name="author" content="Tom Delaney">
     <!--NAVBAR & STYLING-->
     <style>
         nav ul {
@@ -16,29 +14,34 @@
             gap: 20px;
         }
     </style>
-</header>
-<nav>
-    <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#XC">XC</a></li>
-        <li><a href="#Trail">Trail</a></li>
-        <li><a href="#AM">All mountain</a></li>
-        <li><a href="#Enduro">Enduro</a></li>
-        <li><a href="#Downhill">Downhill</a></li>
-        <li><a href="#Video">Video</a></li>
-        <li><a href="#Contact">Contact</a></li>
-    </ul>
-</nav>
-<!--INTRODUCTION-->
-<div id="intro">
-    <h1>Cross country? Trail? Enduro? What?!</h1>
-    <p>There are many different types of mountain bikes, and this can be confusing to new riders. This page will help
-        you understand the different types of mountain bikes you may hear about. The bike classifications are arranged
-        in order from the least agressive to the most aggressive type of riding.</p>
-</div>
-<!--MAIN CONTENT-->
-
+</head>
 <body>
+    <!--HEADER-->
+    <header>
+        <h1>Types of mountain bikes</h1>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#XC">XC</a></li>
+            <li><a href="#Trail">Trail</a></li>
+            <li><a href="#AM">All mountain</a></li>
+            <li><a href="#Enduro">Enduro</a></li>
+            <li><a href="#Downhill">Downhill</a></li>
+            <li><a href="#Video">Video</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <!--INTRODUCTION-->
+    <div id="intro">
+        <h1>Cross country? Trail? Enduro? What?!</h1>
+        <p>There are many different types of mountain bikes, and this can be confusing to new riders. This page will
+            help
+            you understand the different types of mountain bikes you may hear about. The bike classifications are
+            arranged
+            in order from the least aggressive to the most aggressive type of riding.</p>
+    </div>
+    <!--MAIN CONTENT-->
     <article>
         <div id="XC">
             <h2>Cross country (XC) bikes</h2>
@@ -107,14 +110,19 @@
     <section>
         <div id="Contact">
             <h2>Contact</h2>
-            <p>If you have any questions, comments, or ideas for future articles, please feel free to contact me using
-                the form below:</p>
-            <form>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name"><br>
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Phone Number"><br>
-                <textarea placeholder="Type message here..."></textarea><br>
+            <p>If you have any questions, comments, or ideas for future articles, please feel free to contact me using the form below:</p>
+            
+            <form action="#Contact">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" placeholder="First Name">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Last Name"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Phone Number"><br>
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Type message here..."></textarea><br>
                 <input type="checkbox" id="Newsletter">
                 <label for="Newsletter">Subscribe to my newsletter?</label><br>
                 <input type="submit" value="Submit">
