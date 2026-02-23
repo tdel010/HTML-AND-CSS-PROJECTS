@@ -5,10 +5,11 @@
         <meta charset="UTF-8">
         <meta name="Contact Us" content="Contact page and newsletter sign-up for The Pet Shop!">
         <meta name="author" content="Tom Delaney">
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
         <!--NAVBAR-->
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -17,18 +18,19 @@
     <!--HEADER-->
         <header>
             <div>
-                <h1>Contact Us!</h1>
+                <h1 class="animate-text">Contact Us!</h1>
             </div>
         </header>
         <!--FORM-->
         <section>
             <div>
-                <h3>Please provide your contact information and a brief message of your inquiry:</h3>              
+                <h3 id="contact-h3">Please provide your contact information and a brief message of your inquiry.
+                </h3>              
             </div>
                 <form>
                 <input type="text" placeholder="First Name">
                 <input type="text" placeholder="Last Name"><br>
-                <input type="email" placeholder="Email"><br>
+                <input type="email" placeholder="Email">
                 <input type="tel" placeholder="Phone Number"><br>
                 <input type="checkbox" id="Newsletter">
                 <label for="Newsletter">Subscribe to our newsletter?</label><br>
