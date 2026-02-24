@@ -1,0 +1,277 @@
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    /*Sets the position of the navbar in the stack
+    layer so it is on top*/
+}
+
+ul {
+    list-style-type: none;
+    /*Removes the default bullet point styling
+     from the list tag items*/
+    background-color: #363636;
+    margin: -10px -10px 0px -10px;
+    /*Margin value order top,
+    right, bottom, left*/
+    overflow: hidden;
+    /*Hides excess margin space expanding past
+    the browser window edge and prevents a left to right
+    scroll bar*/
+    display: flex;
+    /*Creates flex container so the elements
+    will take up as much of the width that is available*/
+    align-items: center;
+}
+
+a {
+    display: block;
+    font-family: 'Audiowide', calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    /*Removes the default underline link text-decoratoin*/
+    text-transform: uppercase;
+    /*Transforms all text to uppercase regardless
+    of the case that is typed in the HTML file*/
+    width: 100px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.4s ease-in;
+}
+
+/*NAVBAR ROLLOVER EFFECTS*/
+a:hover,
+.drop:hover
+
+/*drop:hover triggers when any one of the 
+links in the Images list tag is being hovered over*/
+    {
+    background-color: rgb(228, 159, 0);
+    color: rgb(49, 49, 49);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+}
+
+/*Styles and hides the anchor links within the Images link
+div tag*/
+.rollover-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*Displays anchor elements when the user hovers their mouse
+over the Images link*/
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+/*Specifically styles teh anchor elements within the div tag
+that contains the rollover menu class selector*/
+.rollover-menu a {
+    color: #363636;
+}
+
+/*Specifically styles the anchor elements within the div tag
+that contains the rollover-menu class selector when the hover
+effect is triggered*/
+.rollover-menu a:hover {
+    color: white;
+}
+
+/*Specifically styles the first anchor element child within the 
+rollover-menu div tag*/
+.rollover-menu a:hover:nth-child(1) {
+    background-color: rgb(117, 20, 20);
+}
+
+/*Specifically styles the second anchor element child within the 
+rollover-menu div tag*/
+.rollover-menu a:hover:nth-child(2) {
+    background-color: rgb(87, 7, 7);
+}
+
+/*Specifically styles the third anchor element child within the 
+rollover-menu div tag*/
+.rollover-menu a:hover:nth-child(3) {
+    background-color: rgb(48, 2, 2);
+}
+
+/*FOOTER*/
+footer {
+    background-color: #363636;
+    margin: 30px -10px -10px -10px;
+    /*Margin value order top
+    right, bottom, left*/
+    overflow: hidden;
+    /*Hides excess margin space expanding past
+    the browser window edge and prevents a left to right scroll bar*/
+}
+
+/*Styles the text within the footer element*/
+.footer-text {
+    font-family: 'calibri', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(228, 159, 0);
+    text-align: center;
+}
+
+/*IMAGES*/
+img {
+    width: 50%;
+    height: auto;
+}
+
+/*Creates a container for each image to be held in*/
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    position: relative;
+}
+
+/*Creates a uniform amound of space (as the other two images
+on the screen) from the navbar to the top of the image when
+the bookmark link is clicked*/
+#image3 {
+    padding-bottom: 170px;
+}
+
+/*IMAGE ONE*/
+/*Ensure image one is properly sized*/
+#image1 img {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+/*Overlays a dark grey color over the first image when the user hovers their mouse over it*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    background-color: rgb(90, 90, 90);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/*Style overlay text*/
+.overlay-text {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*Triggers the hover effect of the overlay on Image 1 with a
+60% opacity*/
+.image-container:hover .overlay {
+    opacity: 0.6;
+}
+
+/*IMAGE TWO*/
+.zoom {
+    transform: scale(1);
+    /*Sets the base size of image 2 for
+    a zoom in effect*/
+    transition: 0.5s ease-out;
+    /*Creates a smooth transition
+    of the image zooming back to its original size*/
+    z-index: 3;
+    /*Sets image position in the stack layer behind
+    navbar so zoom effect does not cover the navbar*/
+}
+
+/*Creates a zoom in effect on image 2*/
+.zoom:hover {
+    transform: scale(1.5);
+    /*Scales image 2 to grow half
+    its size*/
+    transition: 0.5s ease-out;
+}
+
+/*IMAGE THREE*/
+
+/*Creates the position of the animation burst and hides any
+overflow of the shape size going beyond the edges of image 3*/
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*Makes the image inside circle fill the circle container*/
+.circle img {
+    width: 100%;
+    height: auto;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    /*Creates a circle/oval shape*/
+    opacity: 0; /*Makes the shape invisible until the 
+    animation is triggered by a hover effect*/
+    animation: burst-revers 1s;
+}
+
+/*Triggers the hover effect on the circle class selector
+::before*/
+.circle:hover::before {
+    animation: burst 1s;
+    animation-fill-mode: forwards;
+}
+
+/*Creates a growing circle effect*/
+@keyframes burst {
+    0%
+
+    /*0% is the start of the animation*/
+        {
+        opacity: 0.2;
+        background-color: rgb(224, 224, 224);
+    }
+
+    100%
+
+    /*100% is the end of the animation*/
+        {
+        opacity: 0.7;
+        background-color: rgb(224, 224, 224);
+        width: 300%;
+        height: 300%;
+    }
+}
+
+/*Animation of the circle shrinking back to the center
+of the image*/
+@keyframes burst-reverse {
+    0% {
+        opacity: 0.7;
+        background-color: rgb(224, 224, 224);
+        width: 300%;
+        height: 300%;
+    }
+
+    100% {
+        opacity: 0.2;
+        background-color: rgb(224, 224, 224);
+    }
+}

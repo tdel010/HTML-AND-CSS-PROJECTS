@@ -1,0 +1,201 @@
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    /*Sets the position of the navbar in the stack
+    layer so it is on top*/
+}
+
+ul {
+    list-style-type: none;
+    /*Removes the default bullet point styling
+     from the list tag items*/
+    background-color: #363636;
+    margin: -10px -10px 0px -10px;
+    /*Margin value order top,
+    right, bottom, left*/
+    overflow: hidden;
+    /*Hides excess margin space expanding past
+    the browser window edge and prevents a left to right
+    scroll bar*/
+    display: flex;
+    /*Creates flex container so the elements
+    will take up as much of the width that is available*/
+    align-items: center;
+}
+
+a {
+    display: block;
+    font-family: 'Audiowide', calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    /*Removes the default underline link text-decoratoin*/
+    text-transform: uppercase;
+    /*Transforms all text to uppercase regardless
+    of the case that is typed in the HTML file*/
+    width: 100px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.4s ease-in;
+}
+
+/*NAVBAR ROLLOVER EFFECTS*/
+a:hover,
+.drop:hover
+
+/*drop:hover triggers when any one of the 
+links in the Images list tag is being hovered over*/
+    {
+    background-color: rgb(228, 159, 0);
+    color: rgb(49, 49, 49);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease-in;
+}
+
+/*Styles and hides the anchor links within the Images link
+div tag*/
+.rollover-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*Displays anchor elements when the user hovers their mouse
+over the Images link*/
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+/*Specifically styles the anchor elements within the div tag
+that contains the rollover menu class selector*/
+.rollover-menu a {
+    color: #363636;
+}
+
+/*Specifically styles the anchor elements within the div tag
+that contains the rollover-menu class selector when the hover
+effect is triggered*/
+.rollover-menu a:hover {
+    color: white;
+}
+
+/*Specifically styles the first anchor element child within the 
+rollover-menu div tag*/
+.rollover-menu a:hover:nth-child(1) {
+    background-color: rgb(117, 20, 20);
+}
+
+/*Specifically styles the second anchor element child within the 
+rollover-menu div tag*/
+.rollover-menu a:hover:nth-child(2) {
+    background-color: rgb(87, 7, 7);
+}
+
+/*Specifically styles the third anchor element child within the 
+rollover-menu div tag*/
+.rollover-menu a:hover:nth-child(3) {
+    background-color: rgb(48, 2, 2);
+}
+
+/*FOOTER*/
+footer {
+    background-color: #363636;
+    margin: 30px -10px -10px -10px;
+    /*Margin value order top
+    right, bottom, left*/
+    overflow: hidden;
+    /*Hides excess margin space expanding past
+    the browser window edge and prevents a left to right scroll bar*/
+}
+
+/*Styles the text within the footer element*/
+.footer-text {
+    font-family: 'calibri', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(228, 159, 0);
+    text-align: center;
+}
+
+/*IMAGES*/
+img {
+    width: 50%;
+    height: auto;
+}
+
+/*IMAGE ONE - ensure image displays as block for proper centering*/
+#image1 {
+    flex-direction: column;
+}
+
+#image1 img {
+    display: block;
+}
+
+/*Creates a container for each image to be held in*/
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    position: relative;
+}
+
+/*Creates a uniform amound of space (as the other two images
+on the screen) from the navbar to the top of the image when
+the bookmark link is clicked*/
+#image3 {
+    padding-bottom: 170px;
+}
+
+/*IMAGE STYLING*/
+/*Overlays a teal color over the image when the user hovers their mouse over them*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    background-color: rgb(228, 159, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/*Triggers the hover effect of the overlay on images with a
+70% opacity*/
+.image-container:hover .overlay {
+    opacity: 0.7;
+}
+
+/*Styles the text that appears on the overlay of images*/
+.overlay-text {
+    font-family: 'Audiowide', calibri, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/*Triggers the hover effect to show the overlay text on images*/
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
+

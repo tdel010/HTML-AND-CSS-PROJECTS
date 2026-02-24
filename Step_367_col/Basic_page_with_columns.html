@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Columns with col</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>My First Table Using &lt;col&gt;</h1>
+
+<table>
+
+    <!-- Column definitions -->
+    <colgroup>
+        <col style="background-color: lightblue;">
+        <col style="background-color: lightgreen;">
+        <col style="background-color: lightyellow;">
+    </colgroup>
+
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+    </tr>
+
+    <tr>
+        <td>Tom</td>
+        <td>35</td>
+        <td>Portland</td>
+    </tr>
+
+    <tr>
+        <td>Alice</td>
+        <td>28</td>
+        <td>Eugene</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

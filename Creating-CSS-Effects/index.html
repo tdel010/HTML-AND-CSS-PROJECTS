@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creating Effects with CSS</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Audiowide">
+        <style>
+            body{
+                font-family: 'Audiowide', sans-serif;
+            }
+        </style>
+    <link rel="stylesheet" href="css/styleCopy.css">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li class="drop">
+                <a href="#">Images</a>
+                <div class="rollover-menu">
+                    <a href="#image1">Image 1</a>
+                    <a href="#image2">Image 2</a>
+                    <a href="#image3">Image 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!--IMAGES -->
+    <section>
+        <!--IMAGE ONE-->
+        <div class="image-container" id="image1">
+            <img src="images/japan-one.jpg" alt="Image of crowded street, Omote-Sando, in Japan">
+            <div class="overlay"></div>
+                <div class="overlay-text">Omote-Sando, Tokyo</div>
+        </div>
+        <!--IMAGE TWO-->
+        <div class="image-container" id="image2">
+            <img src="images/japan-two.jpg" alt="Image of Buddhist monk playing a flute
+            in Japan">
+            <div class="overlay"></div>
+                <div class="overlay-text">Buddhist Monk, Kyoto</div>
+        </div>
+        <!--IMAGE THREE-->
+        <div class="image-container" id="image3">
+            <div class="overlay"></div>
+                <div class="overlay-text">Byodo-in Temple, Uji</div>
+                <img src="images/japan-three.jpg" alt="Image of Byodo-in Temple in Japan">
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-text">
+            <p>The Tech Academy &copy;</p>
+            </p>
+        </div>
+    </footer>
+
+</html>
