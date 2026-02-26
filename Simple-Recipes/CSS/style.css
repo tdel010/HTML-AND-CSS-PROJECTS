@@ -1,0 +1,352 @@
+/*Import link for the Josefin Slab font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*Import link for the Sacramento font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+html {
+    overflow-x: hidden;
+    /*Prevents horizontal scrolling on the page*/
+    scroll-behavior: smooth;
+    /*Enables smooth scrolling when navigating to different sections of the page using anchor links*/
+}
+
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    /*Creates a sticky element that stays
+    in the same spot in the browser screen*/
+    top: 0;
+    /*Tells the browser to stick the element at the
+    top of the page based on user scrolling*/
+    z-index: 9;
+    /*Sets the stack layer of the navbar to scroll
+    over all elements*/
+}
+
+ul {
+    display: flex;
+    /*Creates a flex container which will
+    expand or shrink elements to fill the space available to them 
+    and place the elements side by side horizontally*/
+    list-style-type: none;
+    /*Removes the default styling 
+    for unordered lists elements, which is bullet points*/
+    align-items: center;
+    margins: -8px -8px 0px -8px;
+    /*The margin order is top,
+    right, bottom, left. The negative margins will stretch
+    the background beyond the edge of the browser screen*/
+    background-color: rgb(1, 128, 106);
+    /*Sets the background color of the navbar*/
+    border-bottom: 5px solid rgb(247, 177, 188);
+    /*Creates a border at the bottom of the navbar*/
+}
+
+a {
+    display: block;
+    /*Sets the display of the anchor links to block, which allows for padding and width to be applied to the links*/
+    font-family: "Josefin Slab", serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(247, 177, 188);
+    text-align: center;
+    width: 100px;
+    padding: 20px;
+    text-decoration: none;
+    /*Removes the default underline styling for links*/
+    transition: background-color 0.3s ease-in;
+    /*Adds a transition effect to the background color change when hovered over*/
+}
+
+a:hover,
+.drop:hover a:only-of-type
+
+/*Only-of-type effects
+the only child element nested within an element. This will 
+keep the background color blue while hovering and the text white 
+when we move the mouse over anchor elements in the rollover-menu div*/
+    {
+    background-color: rgb(149, 238, 223);
+    /*Changes the background color of the link when hovered over*/
+    color: white;
+    /*Changes the text color of the link when hovered over*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+    /*Adds a shadow effect to the link when hovered over*/
+    transition: background-color 0.3s ease-in;
+}
+
+/*Adds a transition effect to the background color change when hovered over*/
+
+
+.rollover-menu {
+    display: none;
+    /*Prevents the anchor links in this div
+    from showing on the web browser until otherwise
+    specified*/
+    position: absolute;
+    /*Absolute will position the div
+    element relative to the position of its parent element*/
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*Adds a shadow effect to the rollover menu*/
+}
+
+/*Creates a trigger effect when the user hovers their mouse
+over the Recipes link. Trigger will display all elements
+within the rollover-menu class div element*/
+.drop:hover .rollover-menu {
+    display: block;
+}
+
+
+.rollover-menu a {
+    color: rgb(0, 80, 67);
+}
+
+.rollover-menu a:hover {
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(90, 90, 90, 0.2);
+    /*Adds a shadow effect to the link when hovered over*/
+}
+
+.rollover-menu a:nth-child(1) {
+    border-top: 5px solid rgb(238, 118, 136);
+    /*Adds a border to the top of the first link in the rollover menu*/
+}
+
+/*FOOTER*/
+footer {
+    align-items: center;
+    /*Centers the content of the footer element vertically*/
+    margin: 0px -8px -8px -8px;
+    /*The margin order is top, right, bottom, left. The negative margins will stretch the background beyond the edge of the browser screen, leaving no white space*/
+    background-color: rgb(1, 128, 106);
+    border-top: 5px solid rgb(247, 177, 188);
+    bottom: 0;
+    /*Tells the browser to stick the element at the bottom of the page based on user scrolling*/
+}
+
+table {
+    width: 100%;
+    /*Sets the width of the table to fill the entire width of its container element*/
+}
+
+td {
+    width: 33%;
+    /*Sets the width of each table cell to 33% of the total width of the table, which allows for three cells to fit in each row*/
+}
+
+td p {
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(247, 177, 188);
+}
+
+/*BODY*/
+
+.container {
+    display: block;
+    background-size: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+#recipes {
+    clear: both;
+    /*Clears floats from the featured recipe section above*/
+}
+
+/*HEADERS*/
+
+h1 {
+    font-family: "Sacramento", cursive;
+    /*Font from fonts.google.com*/
+    font-size: 80px;
+    color: rgb(0, 80, 67);
+    font-style: normal;
+    text-align: center;
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
+    text-align: center;
+}
+
+h2 {
+    color: rgb(0, 80, 67);
+    font-size: 60px;
+    text-decoration: underline;
+    text-decoration-color: rgb(247, 177, 188);
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/*PARAGRAPHS*/
+
+p {
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
+    font-size: 20px;
+    color: rgb(0, 80, 67);
+    font-weight: 600;
+    text-align: center;
+}
+
+/*IMAGES*/
+
+/*Positions elements to sit side by side on the screen*/
+.column {
+    float: left;
+    /*Floats the element to the left, allowing other elements to wrap around it*/
+    width: 48%;
+    /*Sets the width of each column to 48% of the total width of the container element, allowing for two columns to fit in each row*/
+    padding: 10px;
+    box-sizing: border-box;
+    /*Includes padding in the width calculation so columns don't exceed 100% width*/
+}
+
+/*Styling for screens 1200px or smaller*/
+@media screen and (max-width: 1200px) {
+    .column {
+        width: 100%;
+        padding: 0px;
+        margin-left: -15px;
+        /*Centers each column on the screen*/
+    }
+}
+
+/*Specifically styles the first 7 img tag elements contained
+in elements with the .column class*/
+.column img:nth-child(-n+7) {
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+        0 6px 20px rgba(0, 0, 0, 0.2);
+    /*Adds a shadow effect to the images*/
+}
+
+.recipe-container {
+    width: 500px;
+    height: 350px;
+    margin: 100px auto 180px;
+    /*Shorthand value top, right and left, 
+    then bottom*/
+}
+
+.recipe-card-background {
+    background-color: rgb(149, 238, 223);
+}
+
+/*Styling for mobile size screens*/
+@media screen and (max-width: 600px) {
+    .column img:nth-child(-n+7) {
+        width: 350px;
+        height: 225px;
+    }
+
+    .recipe-container {
+        width: 350px;
+        height: 225px;
+    }
+}
+
+/*Alternates the blue tile background on smaller screen sizes*/ 
+@media screen and (max-width: 1200px) {
+    #pork{
+        background-color: rgb(255, 255, 255);
+    }
+    #biscuits{
+        background-color: rgb(149, 238, 223);   
+    }
+}
+
+/*FEATURED RECIPE*/
+
+/*Styles the featured recipe h3 tag*/
+#featured-header{
+    font-family: 'Sacramento', cursive; /*Font from fonts.google.com*/
+    font-size: 60px;
+    color: rgb(0, 80, 67);
+}
+
+/*Styles the featured recipe main text*/
+#featured-main-text{
+    text-align: justify;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+/*Styling for screens 1200px or smaller* Sets margin left to 0
+because it is not needed on smaller screens and centers the text*/
+@media screen and (max-width: 1200px) {
+    #featured-main-text{
+        margin-left: 0px;
+    }
+}
+
+/*Styling for screens 1600px or larger* Increases the size of the featured recipe image*/
+@media screen and (min-width: 1600px){
+    #featured img{
+        width: 700px;
+        height: auto; /*Automatically adjusts the height of the image to maintain its aspect ratio*/    
+        margin-left: -100px;
+        margin-top: -20px; /*Margin left and top will override margin styling
+        from the .recipe-container class and center the image on larger screens*/
+    }
+}   
+
+/*Adjusts the position of the featured recipe image on smaller screens by setting margin left to 0 and adding margin top to create space between the image and the text*/
+@media screen and (max-width: 1599px){
+    #featured img{
+        margin-left: 0px;
+        margin-top: 40px; /*Margin top will override margin styling*/
+     }
+}
+
+/*Styling for screens 600px or smaller* Decreases the height of the featured recipe image and adds margin top to create space between the image and the text on smaller screens*/
+@media screen and (max-width: 600px){
+    #featured .recipe-card-background{
+        height: 300px;
+    }
+    #featured img{
+        margin-top: -65px;
+    }
+}
+
+
+#featured-button{
+    display: block; /*Positions the recipe button on its own line
+    from the other elements in the featured recipe section*/
+    margin: 60px auto 0px; /*Shorthand value top, right and left, then bottom. Centers the button on the screen*/
+    background-color: rgb(1, 128, 106);
+    border-radius: 35px;
+    border: none; /*Removes the default border styling for button styling
+    when border-radius is applied*/
+    font-family: "Josefin Slab", serif; /*Font from fonts.google.com*/
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 25px;
+    color: white;
+    cursor: pointer; 
+}
+
+/*Specifically styles the hover effect of the recipe button
+in the Featured Recipe section*/
+#featured-button:hover{
+    background-color: rgb(247, 177, 188);
+}
