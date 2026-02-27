@@ -33,7 +33,7 @@ ul {
     /*Removes the default styling 
     for unordered lists elements, which is bullet points*/
     align-items: center;
-    margins: -8px -8px 0px -8px;
+    margin: -8px -8px 0px -8px;
     /*The margin order is top,
     right, bottom, left. The negative margins will stretch
     the background beyond the edge of the browser screen*/
@@ -246,6 +246,9 @@ in elements with the .column class*/
     margin: 100px auto 180px;
     /*Shorthand value top, right and left, 
     then bottom*/
+    perspective: 1000px;
+    /*Tells the browser how much 3D space an element should
+    take up on the screen*/
 }
 
 .recipe-card-background {
@@ -265,27 +268,29 @@ in elements with the .column class*/
     }
 }
 
-/*Alternates the blue tile background on smaller screen sizes*/ 
+/*Alternates the blue tile background on smaller screen sizes*/
 @media screen and (max-width: 1200px) {
-    #pork{
+    #pork {
         background-color: rgb(255, 255, 255);
     }
-    #biscuits{
-        background-color: rgb(149, 238, 223);   
+
+    #biscuits {
+        background-color: rgb(149, 238, 223);
     }
 }
 
 /*FEATURED RECIPE*/
 
 /*Styles the featured recipe h3 tag*/
-#featured-header{
-    font-family: 'Sacramento', cursive; /*Font from fonts.google.com*/
+#featured-header {
+    font-family: 'Sacramento', cursive;
+    /*Font from fonts.google.com*/
     font-size: 60px;
     color: rgb(0, 80, 67);
 }
 
 /*Styles the featured recipe main text*/
-#featured-main-text{
+#featured-main-text {
     text-align: justify;
     padding-top: 20px;
     margin-left: 40px;
@@ -294,59 +299,228 @@ in elements with the .column class*/
 /*Styling for screens 1200px or smaller* Sets margin left to 0
 because it is not needed on smaller screens and centers the text*/
 @media screen and (max-width: 1200px) {
-    #featured-main-text{
+    #featured-main-text {
         margin-left: 0px;
     }
 }
 
 /*Styling for screens 1600px or larger* Increases the size of the featured recipe image*/
-@media screen and (min-width: 1600px){
-    #featured img{
+@media screen and (min-width: 1600px) {
+    #featured img {
         width: 700px;
-        height: auto; /*Automatically adjusts the height of the image to maintain its aspect ratio*/    
+        height: auto;
+        /*Automatically adjusts the height of the image to maintain its aspect ratio*/
         margin-left: -100px;
-        margin-top: -20px; /*Margin left and top will override margin styling
+        margin-top: -20px;
+        /*Margin left and top will override margin styling
         from the .recipe-container class and center the image on larger screens*/
     }
-}   
+}
 
 /*Adjusts the position of the featured recipe image on smaller screens by setting margin left to 0 and adding margin top to create space between the image and the text*/
-@media screen and (max-width: 1599px){
-    #featured img{
+@media screen and (max-width: 1599px) {
+    #featured img {
         margin-left: 0px;
-        margin-top: 40px; /*Margin top will override margin styling*/
-     }
+        margin-top: 40px;
+        /*Margin top will override margin styling*/
+    }
 }
 
 /*Styling for screens 600px or smaller* Decreases the height of the featured recipe image and adds margin top to create space between the image and the text on smaller screens*/
-@media screen and (max-width: 600px){
-    #featured .recipe-card-background{
+@media screen and (max-width: 600px) {
+    #featured .recipe-card-background {
         height: 300px;
     }
-    #featured img{
+
+    #featured img {
         margin-top: -65px;
     }
 }
 
 
-#featured-button{
-    display: block; /*Positions the recipe button on its own line
+#featured-button {
+    display: block;
+    /*Positions the recipe button on its own line
     from the other elements in the featured recipe section*/
-    margin: 60px auto 0px; /*Shorthand value top, right and left, then bottom. Centers the button on the screen*/
+    margin: 60px auto 0px;
+    /*Shorthand value top, right and left, then bottom. Centers the button on the screen*/
     background-color: rgb(1, 128, 106);
     border-radius: 35px;
-    border: none; /*Removes the default border styling for button styling
+    border: none;
+    /*Removes the default border styling for button styling
     when border-radius is applied*/
-    font-family: "Josefin Slab", serif; /*Font from fonts.google.com*/
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
     font-size: 30px;
     font-weight: bold;
     padding: 15px 25px;
     color: white;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 /*Specifically styles the hover effect of the recipe button
 in the Featured Recipe section*/
-#featured-button:hover{
+#featured-button:hover {
     background-color: rgb(247, 177, 188);
 }
+
+/*IMAGE FLIP*/
+
+/*Positions the flip effect, defines transition time,
+and defines a 3D effect*/
+.flip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*Setting the width and height to 100%
+    will allow the flip effect to fill the entire area of the recipe card*/
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    /*Treats elements as 3D objects
+    instead of flat (2D) objects*/
+}
+
+.flip:hover {
+    transform: rotateY(180deg);
+    /*Rotates the element 180 degrees on the Y-axis when hovered over, creating a flip effect*/
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-back {
+    background-color: rgb(149, 238, 223);
+    border: 2px solid white;
+    transform: rotateY(180deg);
+    /*Adds 180 degrees back from 
+    the previously subtracted -180 degrees it moved to previously
+    so the text can be read properly*/
+}
+
+
+.text-container {
+    padding-top: 70px;
+}
+
+@media screen and (max-width: 600px) {
+    .text-container {
+        padding-top: 0px;
+    }
+}
+
+/*RECIPE BUTTONS*/
+
+input[type="button"] {
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
+    font-weight: bold;
+    font-size: 22px;
+    padding: 11px 17px;
+    color: rgb(1, 128, 106);
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(247, 177, 188);
+    color: white;
+}
+
+/*CONTACT FORM CSS*/
+
+/*Sets up the content within the div tag containing the ID 
+contact to be centered on the screen*/
+#contact {
+    clear: both;
+    display: block;
+    margin-bottom: 70px;
+}
+
+form {
+    display: table;
+    /*Sets the form element to behave like a table, allowing for the use of table properties to align form elements*/
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /*Centers the form element on the screen by setting left and right margins to auto*/
+}
+
+/*This will specifically target the input tags that are
+nested within the form tags*/
+form input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: rgb(165, 165, 165);
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 15px 10px 0px;
+    transition: 0.3s ease-out;
+    /*Adds a transition effect to the border and text color change when the input field is focused*/
+}
+
+form input:focus {
+    border: 2px solid rgb(1, 128, 106);
+    color: black;
+    outline: none;
+    /*Removes the default blue outline styling for focused input elements*/
+    transition: 0.3s ease-out;
+}
+
+label {
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    resize: both;
+    /*Allows the user to resize the textarea both horizontally and vertically*/
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(165, 165, 165);
+    font-size: 15px;
+    transition: 0.3s ease-out;
+    /*Adds a transition effect to the border and text color change when the textarea is focused*/
+}
+
+textarea:focus{
+    color: black;
+    border: 3px solid rgb(1, 128, 106);
+    transition: 0.3s ease-out;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(1, 128, 106);
+    border: none;
+    border-radius: 35px;
+    font-family: "Josefin Slab", serif;
+    /*Font from fonts.google.com*/
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: #fff;
+    cursor: pointer;
+    float: right; /*Floats the submit button to the right, allowing it to sit on the same line as the textarea element*/
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(247, 177, 188);
+}
+
