@@ -37,6 +37,8 @@ ul {
     /*The margin order is top,
     right, bottom, left. The negative margins will stretch
     the background beyond the edge of the browser screen*/
+    padding: 0;
+    /*Removes default padding from the ul element*/
     background-color: rgb(1, 128, 106);
     /*Sets the background color of the navbar*/
     border-bottom: 5px solid rgb(247, 177, 188);
@@ -78,6 +80,10 @@ when we move the mouse over anchor elements in the rollover-menu div*/
 
 /*Adds a transition effect to the background color change when hovered over*/
 
+.drop {
+    position: relative;
+    /*Makes the dropdown menu position relative to this element*/
+}
 
 .rollover-menu {
     display: none;
@@ -87,6 +93,10 @@ when we move the mouse over anchor elements in the rollover-menu div*/
     position: absolute;
     /*Absolute will position the div
     element relative to the position of its parent element*/
+    top: 100%;
+    /*Positions the dropdown directly below the parent element*/
+    left: 0;
+    /*Aligns the dropdown with the left edge of the parent*/
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     /*Adds a shadow effect to the rollover menu*/
@@ -524,3 +534,14 @@ input[type="submit"]:hover {
     background-color: rgb(247, 177, 188);
 }
 
+/*ABOUT US section styling*/
+#about {
+    padding:70px 30px;
+    clear: both;
+    display: block;
+    scroll-margin-top: 100px;
+}
+
+#about p{
+    text-align: justify;
+}
