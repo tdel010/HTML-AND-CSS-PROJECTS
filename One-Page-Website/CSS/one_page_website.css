@@ -1,0 +1,66 @@
+/*Setting font for the entire page*/
+body{
+    font-family: Arial, sans-serif;
+}
+
+/*Setting font size for the paragraph text*/
+p{
+    font-size: 16px;
+}
+
+/*Styling for the form section*/
+/*Form container*/
+form {
+    width: min(520px, 100%);
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;   /*Puts everything in a column instead of spread out willy-nilly*/
+    gap: 16px;                
+}
+
+/*Groups label and input together*/
+form label {
+    font-weight: medium;
+    margin-bottom: 4px;
+}
+
+/*Text inputs and textarea*/
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid black;
+    border-radius: 8px;       /*Rounded corners on the input boxes*/
+    box-sizing: border-box;
+}
+
+/*Textarea height*/
+form textarea {
+    min-height: 120px; /*I find resizing small text input boxes annoying, so I made the 
+    height of the textarea bigger than the default*/
+    resize: vertical; /*Tried "both" but it made it look weird when
+    I resized it horizontally, so now you can only resize vertically*/
+}
+
+/*Checkbox row*/
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+/*Submit button*/
+form input[type="submit"] {
+    padding: 14px 22px;
+    font-size: 16px;
+    border-radius: 8px;       /*Rounded button edges*/
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    width: fit-content;
+}
+
