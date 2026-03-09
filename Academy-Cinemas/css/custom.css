@@ -319,6 +319,8 @@ footer{
 
 /*Styles the logo image in the footer to be smaller and fit better with the text*/
 .footer-image{
+    display: block;
     width: auto;
     height: 130px;
+    margin: 0 auto;
 }
