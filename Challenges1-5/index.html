@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tokyo Cityscape</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Tom Delaney">
+    <!--STYLING-->
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <!--NAVBAR-->
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <h1>View of Tokyo from the SkyTree</h1>
+    </header>
+    <main>
+        <!--MAIN CONTENT-->
+        <section class="container">
+            <img src="images/tokyo-late-afternoon.jpg" alt="A picture of Tokyo in the late afternoon">
+            <div class="centered" id="home">TOKYO</div>
+        </section>
+        <section id="about">
+            <table>
+                <caption>ABOUT</caption>
+                <tr>
+                    <th>Vantage Point</th>
+                    <th>Time of Day</th>
+                    <th>Direction Facing</th>
+                    <th>Camera Used</th>
+                </tr>
+                <tr>
+                    <td>Tokyo SkyTree</td>
+                    <td>Late Afternoon</td>
+                    <td>Northwest</td>
+                    <td>Google Pixel 10 XL</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+
+<!--CONTACT FORM-->
+<section>
+    <div class="container" id="contact">
+        <h2>CONTACT</h2>
+        <p><b>If you have any questions about this photo, please feel free to contact me using
+            this form:</b></p>
+
+        <form action="#contact">
+            <div>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First Name">
+            </div>
+            <div>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Type message here..."></textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="Newsletter" name="newsletter">
+                <label for="Newsletter">Subscribe to my newsletter?</label>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+<!--FOOTER-->
+<footer>&copy; Tom Delaney, 2026</footer>
+
+</html>

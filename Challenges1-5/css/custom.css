@@ -1,0 +1,152 @@
+/*Centers the heading*/
+h1 {
+    text-align: center;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+body {
+    margin: 10px;
+    padding-top: 60px;
+}
+
+#about {
+    scroll-margin-top: 80px;
+}
+
+
+/*Styles the image*/
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    filter: grayscale(100%);
+}
+
+/*Styles the footer*/
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/*Styles the table*/
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th {
+    background-color: lightgray;
+}
+
+/*Styles the container for the image and caption*/
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black
+}
+
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/*Styles the navigation bar*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightgray;
+    z-index: 1000;
+}
+
+nav ul {
+    float: left;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;
+    gap: 20px;
+}
+
+nav a {
+    color: dimgray;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: gray;
+    color: white;
+}
+
+/*Styles the contact form*/
+#contact {
+    position: static;
+    text-align: left;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 14px 20px;
+}
+
+#contact form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#contact form > div:nth-of-type(5),
+#contact form > div:nth-of-type(6),
+#contact form > input[type="submit"] {
+    grid-column: 1 / -1;
+}
+
+#contact form > div:nth-of-type(6) {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea {
+    width: 100%;
+}
+
+#contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact input[type="submit"] {
+    justify-self: start;
+}
