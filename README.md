@@ -10,8 +10,8 @@ This repository is for projects created for The Tech Academy's HTML and CSS cour
 - Grace Hopper Page
 - Portfolio Page 
 - Simple Recipes Page
-- The Pet Shop Page
 - Small Assignments Folder
+- The Pet Shop Page
 
 ### Academy Cinemas Page
 This page is an example home page for an imaginary movie theater styled using Bootstrap components. 
