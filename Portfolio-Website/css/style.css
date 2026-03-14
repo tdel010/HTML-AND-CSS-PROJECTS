@@ -1,0 +1,246 @@
+/* General styling */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+:root { /* Makes side navbar consistent with no white spaces appearing */
+    --sidebar-width: 200px;
+}
+
+/* NAVBAR. W3schools helped with this a lot! */
+.sidenav {
+    height: 100%;
+    width: var(--sidebar-width);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+/* The navbar menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: lightgray;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.sidenav a:hover {
+    color: darkgray;
+}
+
+/* Shrink sidebar gradually on smaller screens */
+@media (max-width: 1100px) {
+    :root {
+        --sidebar-width: 170px;
+    }
+    .sidenav a {
+        font-size: 22px;
+        padding-left: 24px;
+    }
+}
+
+@media (max-width: 850px) {
+    :root {
+        --sidebar-width: 140px;
+    }
+    .sidenav a {
+        font-size: 18px;
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    :root {
+        --sidebar-width: 115px;
+    }
+    .sidenav a {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-image {
+        max-width: 100%;
+    }
+}
+
+/* Hero section */
+.hero {
+    height: 70vh;
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    background-image: url('../images/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* Styling for the quote in the hero section */
+.hero p.quote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 20px;
+    color: white;
+}
+
+/* Page content */
+.main {
+    margin-left: var(--sidebar-width);
+    /* Same as the width of the sidenav */
+    padding: 20px;
+    transition: margin-left 0.3s;
+    background-color: #f2f2f2;
+}
+
+
+/* Container for the screenshots with links */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Four columns by default (smaller screenshots) */
+    gap: 30px;
+    /* Space between items */
+}
+
+/* Styling for screenshot links */
+.photo-grid a {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    background-color: white;
+}
+
+/* Screenshot styling */
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Comment text area under each screenshot */
+.screenshot-comment {
+    display: block;
+    padding: 10px 12px;
+    min-height: 44px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333333;
+}
+
+/* Hover effect */
+.photo-grid a:hover {
+    transform: scale(1.03);
+}
+
+/* Stack into one column on small screens */
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+}
+
+/* Use two columns on medium screens */
+@media (max-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ABOUT section image + text layout */
+.about-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex: 0 0 30%;
+    max-width: 30%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.about-content p {
+    flex: 1;
+    margin: 0;
+}
+
+/* CONTACT FORM STYLES */
+
+/* Style inputs with type="text" */
+input[type=text],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+input[type=submit]:hover {
+    background-color: darkgray;
+}
+
+/* Background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* FOOTER styling */
+footer {
+    margin-left: var(--sidebar-width);
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    color: white;
+}
+
