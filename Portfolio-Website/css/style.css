@@ -7,11 +7,13 @@ body {
     background-color: #f9f9f9;
 }
 
-:root { /* Makes side navbar consistent with no white spaces appearing */
+:root {
+    /* Used below to make side navbar play nice with different screen sizes.
+    Works with the @media queries below to change sidebar width. */
     --sidebar-width: 200px;
 }
 
-/* NAVBAR. W3schools helped with this a lot! */
+/* NAVBAR. W3schools helped with making the side navbar a lot! */
 .sidenav {
     height: 100%;
     width: var(--sidebar-width);
@@ -45,33 +47,40 @@ body {
     :root {
         --sidebar-width: 170px;
     }
+
     .sidenav a {
         font-size: 22px;
         padding-left: 24px;
     }
 }
 
+/* Further shrink sidebar on even smaller screens */
 @media (max-width: 850px) {
     :root {
         --sidebar-width: 140px;
     }
+
     .sidenav a {
         font-size: 18px;
         padding-left: 16px;
     }
 }
 
+/* Further shrink sidebar on even smaller screens */
 @media (max-width: 650px) {
     :root {
         --sidebar-width: 115px;
     }
+
     .sidenav a {
         font-size: 15px;
         padding-left: 10px;
     }
+
     .about-content {
         flex-direction: column;
     }
+
     .about-image {
         max-width: 100%;
     }
@@ -104,7 +113,7 @@ body {
     color: white;
 }
 
-/* Page content */
+/* Main section styling */
 .main {
     margin-left: var(--sidebar-width);
     /* Same as the width of the sidenav */
@@ -114,7 +123,7 @@ body {
 }
 
 
-/* Container for the screenshots with links */
+/* Container for the screenshot links */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -129,7 +138,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease;
     background-color: white;
 }
@@ -172,7 +181,9 @@ body {
 }
 
 /* Use two columns on medium screens */
-@media (max-width: 992px) {
+@media (min-width: 601px) and (max-width: 992px) {
+
+    /* Had to add min-width or it wouldn't stack into one column on small screens */
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -182,7 +193,7 @@ body {
 .about-content {
     display: flex;
     gap: 24px;
-    align-items: flex-start;
+    align-items: flex-start; /* Align items to the top of their flex boxes */
 }
 
 .about-image {
@@ -198,7 +209,12 @@ body {
     margin: 0;
 }
 
+
 /* CONTACT FORM STYLES */
+
+#Contact { /* Added some space between the contact section and the one above it. */
+    margin-top: 100px;
+}
 
 /* Style inputs with type="text" */
 input[type=text],
@@ -210,7 +226,7 @@ textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical
+    resize: vertical;
 }
 
 /* Style the submit button with a specific background color etc */
@@ -228,10 +244,10 @@ input[type=submit]:hover {
     background-color: darkgray;
 }
 
-/* Background color and some padding around the form */
+/* Some padding around the form */
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #c9c9c9; /* Tried to make the color a little darker to make the form pop a bit */
     padding: 20px;
 }
 
@@ -243,4 +259,3 @@ footer {
     background-color: #333333;
     color: white;
 }
-
