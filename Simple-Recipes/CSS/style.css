@@ -24,7 +24,7 @@ html {
     over all elements*/
 }
 
-ul {
+.nav-bar ul {
     display: flex;
     /*Creates a flex container which will
     expand or shrink elements to fill the space available to them 
@@ -509,7 +509,7 @@ textarea {
     /*Adds a transition effect to the border and text color change when the textarea is focused*/
 }
 
-textarea:focus{
+textarea:focus {
     color: black;
     border: 3px solid rgb(1, 128, 106);
     transition: 0.3s ease-out;
@@ -527,7 +527,8 @@ input[type="submit"] {
     padding: 15px 25px;
     color: #fff;
     cursor: pointer;
-    float: right; /*Floats the submit button to the right, allowing it to sit on the same line as the textarea element*/
+    float: right;
+    /*Floats the submit button to the right, allowing it to sit on the same line as the textarea element*/
 }
 
 input[type="submit"]:hover {
@@ -536,12 +537,106 @@ input[type="submit"]:hover {
 
 /*ABOUT US section styling*/
 #about {
-    padding:70px 30px;
+    padding: 70px 30px;
     clear: both;
     display: block;
     scroll-margin-top: 100px;
 }
 
-#about p{
+#about p {
     text-align: justify;
 }
+
+/*RECIPE MODAL*/
+.recipe-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    /*Creates a semi-transparent white background for the modal*/
+    width: 100%;
+    height: 100%;
+}
+
+.recipe-content {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    top: 15vh;
+    left: 27vw;
+    width: 45vw;
+    height: 70%;
+    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.close-btn {
+    color: rgb(1, 128, 106);
+    font-size: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    line-height: 1;
+}
+
+.modal-header {
+    padding-top: 20px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.rp-column-1 {
+    width: 33%;
+}
+
+.rp-column-2 {
+    width: 67%;
+}
+
+.recipe-list {
+    margin-left: -30px;
+    font-family: "Josefin Slab", serif;
+    font-size: 18px;
+    display: block; /*Positions the recipe list on its own line from the other elements in the modal. Overrides the default inline display of the unordered list element*/
+    border: none; /*Removes the default border styling for unordered list elements*/
+    background-color: transparent; /*Removes the default background styling for unordered list elements*/
+    line-height: 1.5;
+    text-align: center;
+}
+
+.recipe-directions {
+    padding: 0px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.modal-body ul {
+    display: block;
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.modal-body li {
+    display: list-item;
+    font-family: "Josefin Slab", serif;
+    font-size: 18px;
+    color: rgb(0, 80, 67);
+    line-height: 1.5;
+    text-align: left;
+}
+
+
