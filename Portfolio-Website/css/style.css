@@ -172,6 +172,7 @@ body.lightbox-open {
     transform: scale(1.03);
 }
 
+/* LIGHTBOX STYLES */
 .lightbox {
     position: fixed;
     inset: 0;
