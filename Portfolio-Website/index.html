@@ -59,7 +59,7 @@
         </div>
         <div id="Portfolio">
             <h2>Portfolio</h2>
-            <p>Here are some screenshots of work completed for the HTML and CSS course. Click on any of the images to see the project on GitHub!</p>
+            <p>Here are some screenshots of work completed for the HTML and CSS course. Click any image to enlarge it, then use the lightbox link to open the project on GitHub.</p>
             <br>
         </div>
         <div class="photo-grid">
@@ -94,6 +94,21 @@
                 <span class="screenshot-comment">Guided Project</span>
             </a>
         </div>
+        <div class="lightbox" id="portfolio-lightbox" aria-hidden="true">
+            <div class="lightbox-overlay" data-lightbox-close></div>
+            <div class="lightbox-content" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+                <button type="button" class="lightbox-nav lightbox-nav-prev" aria-label="Show previous portfolio image" data-lightbox-prev>&#10094;</button>
+                <button type="button" class="lightbox-nav lightbox-nav-next" aria-label="Show next portfolio image" data-lightbox-next>&#10095;</button>
+                <button type="button" class="lightbox-close" aria-label="Close enlarged image" data-lightbox-close>&times;</button>
+                <div class="lightbox-image-wrapper">
+                    <img id="lightbox-image" src="" alt="">
+                    <a id="lightbox-link" class="lightbox-link" href="#" target="_blank" rel="noopener noreferrer">Click here to view on GitHub</a>
+                </div>
+                <div id="lightbox-thumbnails" class="lightbox-thumbnails" aria-label="Portfolio gallery thumbnails"></div>
+                <p id="lightbox-caption"></p>
+                <p id="lightbox-position" class="lightbox-position"></p>
+            </div>
+        </div>
         <br><br><br><br>
         <div id="About">
             <br><br>
@@ -125,7 +140,7 @@
                 <input type="text" id="email" name="email" placeholder="Your email address...">
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
+                <textarea id="message" name="message" placeholder="Your message..."></textarea>
 
                 <input type="submit" value="Submit">
 
@@ -140,6 +155,7 @@
         <br>
         </p>
     </footer>
+    <script src="JS/one_page_website.js"></script>
 </body>
 
 
