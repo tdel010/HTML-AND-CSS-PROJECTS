@@ -192,6 +192,54 @@ img {
     padding-top: 50px;
 }
 
+/*FEATURED MOVIES CAROUSEL*/
+
+#featured-movies {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.featured-carousel-inner {
+    border: 5px solid var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.featured-slide-link {
+    display: block;
+    text-decoration: none;
+}
+
+.featured-carousel-image {
+    max-height: 650px;
+    object-fit: cover;
+}
+
+.featured-caption {
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.featured-caption h5 {
+    font-family: var(--main-font-family);
+    font-size: 40px;
+    color: var(--main-color-accent);
+    margin-bottom: 5px;
+}
+
+.featured-caption p {
+    font-size: 20px;
+    color: var(--accent-text-color);
+    margin-bottom: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.9));
+}
+
 /*Buttons*/
 
 /*Creates the main styling for buttons that contain the
@@ -211,7 +259,7 @@ Bootstrap class "btn"*/
     border-color: transparent;
     /*Overrides Bootstrap's default focus
     border color for buttons*/
-    backgroung-color: var(--main-color);
+    background-color: var(--main-color);
     color: var(--accent-text-color);
 }
 
@@ -323,4 +371,20 @@ footer{
     width: auto;
     height: 130px;
     margin: 0 auto;
+}
+
+/*POPOVERS*/
+
+.star-rating {
+    width: 80%;
+}
+
+/*TOAST*/
+
+.custom-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }

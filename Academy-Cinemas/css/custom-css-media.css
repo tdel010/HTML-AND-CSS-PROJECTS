@@ -54,3 +54,17 @@ h4{
         padding: 50px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .featured-carousel-image {
+        max-height: 420px;
+    }
+
+    .featured-caption h5 {
+        font-size: 28px;
+    }
+
+    .featured-caption p {
+        font-size: 16px;
+    }
+}
