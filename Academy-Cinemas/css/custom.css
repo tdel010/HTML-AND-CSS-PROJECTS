@@ -37,7 +37,7 @@ body {
     height: 100px;
 }
 
-/*Affects the title in teh navbar Academy Cinemas*/
+/*Affects the title in the navbar Academy Cinemas*/
 .navbar-brand {
     color: var(--main-color-accent);
     font-family: var(--main-font-family);
@@ -68,6 +68,18 @@ in other words, the "active link"*/
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1.5rem;
 }
+
+/*Shrink of scroll navbar*/
+.nav-shrink {
+    height: 80px;
+    transition: 0.5s ease;
+}
+
+/*Adds a transition to the movie drop down menu on shrink and scroll*/
+.navbar-collapse {
+    transition: margin-top 0.5s ease;
+}
+
 
 /*Movie drop down menu*/
 
