@@ -236,6 +236,15 @@ body.lightbox-open {
     border-radius: 8px;
 }
 
+#lightbox-image {
+    opacity: 1;
+    transition: opacity 0.22s ease;
+}
+
+#lightbox-image.is-fading {
+    opacity: 0;
+}
+
 .lightbox-thumbnails {
     display: flex;
     gap: 10px;
@@ -360,6 +369,10 @@ body.lightbox-open {
         transition: none;
     }
 
+    #lightbox-image {
+        transition: none;
+    }
+
     .lightbox-content {
         transform: none;
     }
@@ -452,6 +465,8 @@ body.lightbox-open {
 
 /* Style inputs with type="text" */
 input[type=text],
+/* Include the email input so it matches the same sizing and spacing rules. */
+input[type=email],
 textarea {
     width: 100%;
     padding: 12px;
@@ -464,7 +479,29 @@ textarea {
 }
 
 textarea {
+    /* Ensures the message box starts tall enough. */
     min-height: 200px;
+}
+
+.field-invalid {
+    border-color: #b00020;
+    background-color: #fff2f4;
+}
+
+.form-error {
+    min-height: 1.1em;
+    margin-top: -10px;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    color: #b00020;
+}
+
+.form-summary-error {
+    min-height: 1.2em;
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: bold;
+    color: #8e0018;
 }
 
 /* Style the submit button with a specific background color etc */

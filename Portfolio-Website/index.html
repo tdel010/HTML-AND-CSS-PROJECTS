@@ -131,16 +131,31 @@
         </div>
         <div class="container" id="Contact">
             <h2>Contact Me</h2><br>
-            <form action="https://formspree.io/f/maqpjopo" method="POST">
+            <!-- Added an id so JavaScript can target this form for validation. -->
+            <!-- novalidate disables the browser's default popup messages so the custom messages are shown instead. -->
+            <form id="contact-form" action="https://formspree.io/f/maqpjopo" method="POST" novalidate>
 
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name...">
+                <!-- required marks this field as mandatory. -->
+                <!-- aria-describedby points screen readers to the error message container below. -->
+                <input type="text" id="name" name="name" placeholder="Your name..." required aria-describedby="name-error">
+                <!-- Empty on load; JavaScript fills this with a name-specific error when needed. -->
+                <p id="name-error" class="form-error" aria-live="polite"></p>
 
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="Your email address...">
+                <!-- required and aria-describedby serve the same purpose as above for this field. -->
+                <input type="email" id="email" name="email" placeholder="Your email address..." required aria-describedby="email-error">
+                <!-- Inline email error text here when the email is blank or invalid. -->
+                <p id="email-error" class="form-error" aria-live="polite"></p>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your message..."></textarea>
+                <!-- Message is required and linked to its own error container for accessibility. -->
+                <textarea id="message" name="message" placeholder="Your message..." required aria-describedby="message-error"></textarea>
+                <!-- Inline message error text appears here. -->
+                <p id="message-error" class="form-error" aria-live="polite"></p>
+
+                <!-- Shown when submit is attempted with invalid fields. -->
+                <p id="contact-form-error" class="form-summary-error" aria-live="polite"></p>
 
                 <input type="submit" value="Submit">
 
